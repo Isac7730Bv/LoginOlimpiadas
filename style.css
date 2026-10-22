@@ -1,0 +1,149 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #8edde9;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login, .bienvenida {
+    background: #22272e;
+    padding: 38px 30px;
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    animation: aparecer 0.5s ease;
+}
+
+
+h1 {
+    color: #ebf0ff;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.subtitulo, .bienvenida p {
+    color: #70798d;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    color: #92c3fc;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 17px 0 8px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8deeb;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    background: #f8faff;
+}
+
+input:focus {
+    border-color: #56c3c7;
+
+
+}
+
+.campo-password {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.campo-password input {
+    padding-right: 48px;
+}
+
+#verPassword {
+    position: absolute;
+    right: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.boton {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgb(70, 184, 178), rgb(121, 103, 232));
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+form .boton {
+    margin-top: 18px;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+.mensaje {
+    color: #fa2642;
+    font-size: 13px;
+    margin-top: 10px;
+    min-height: 16px;
+}
+
+.bienvenida .detalle {
+    margin-top: -15px;
+    margin-bottom: 28px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .login, .bienvenida {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Estudiante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="contenedor">
+
+        <section class="login" id="pantallaLogin">
+            <h1>Iniciar sesión</h1>
+            <p class="subtitulo">Bienvenido al portal estudiantil</p>
+
+            <form id="formulario">
+                <label for="usuario">Nombre de usuario</label>
+                <input
+                    type="text"
+                    id="usuario"
+                    placeholder="Ingresa tu usuario"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="contrasena">Contraseña</label>
+                <div class="campo-password">
+                    <input
+                        type="password"
+                        id="contrasena"
+                        placeholder="Ingresa tu contraseña"
+                        autocomplete="current-password"
+                        required
+                    >
+                    <button type="button" id="verPassword"
+                            aria-label="Mostrar contraseña">👁</button>
+                </div>
+
+                <p id="mensaje" class="mensaje" role="alert"></p>
+
+                <button type="submit" class="boton">
+                    Ingresar
+                </button>
+            </form>
+        </section>
+
+        <section class="bienvenida" id="pantallaBienvenida" hidden>
+            <h1>¡Bienvenido estudiante!</h1>
+            <p>Has iniciado sesión correctamente.</p>
+            <p class="detalle">Nos alegra tenerte aquí.</p>
+
+            <button id="cerrarSesion" class="boton">
+                Cerrar sesión
+            </button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
